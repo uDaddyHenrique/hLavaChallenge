@@ -63,6 +63,7 @@ public class Lava extends JavaPlugin {
         pm.registerEvents(new PlayerDamageListener(), this);
         pm.registerEvents(new PlayerDropListener(), this);
         pm.registerEvents(new PlayerRespawnListener(), this);
+        pm.registerEvents(new PlayerDamageByEntityListener(), this);
         pm.registerEvents(new SignPlaceListener(), this);
         pm.registerEvents(new SignBreakListener(), this);
         pm.registerEvents(new SignInteractListener(), this);
