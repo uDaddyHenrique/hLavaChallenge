@@ -1,0 +1,6 @@
+name: hLavaChallenge
+version: 1.0
+main: me.henrique.lava.Lava
+commands:
+  lava:
+  spawn:
