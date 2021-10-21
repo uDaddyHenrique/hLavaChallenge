@@ -6,6 +6,7 @@ me\henrique\lava\commands\SpawnCommand.class
 me\henrique\lava\listeners\PlayerJoinListener.class
 me\henrique\lava\listeners\ServerMenuInteractListener.class
 me\henrique\lava\sign\SignPlaceListener.class
+me\henrique\lava\listeners\PlayerDamageByEntityListener.class
 me\henrique\lava\commands\LavaCommand.class
 me\henrique\lava\listeners\PlayerDeathListener.class
 me\henrique\lava\manager\SpawnManager.class
