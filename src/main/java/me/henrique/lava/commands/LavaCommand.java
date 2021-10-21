@@ -35,6 +35,7 @@ public class LavaCommand implements CommandExecutor {
                 p.sendMessage("");
                 p.sendMessage("§e/lava setspawn §f- Setar o spawn do servidor.");
                 p.sendMessage("§e/lava setlocal §f- Setar o local onde o player nasce após entrar na warp.");
+                p.sendMessage("§e/lava sethologram <facil/medio/dificil/extremo> §f- §cEM BREVE");
                 return false;
             }
             if(args.length == 1){
