@@ -9,11 +9,6 @@ public class RecraftRecipe {
 
     public static void recraft(){
 
-        ShapelessRecipe cactuSoup = new ShapelessRecipe(new ItemStack(Material.MUSHROOM_SOUP));
-        cactuSoup.addIngredient(Material.BOWL);
-        cactuSoup.addIngredient(Material.CACTUS);
-        Bukkit.addRecipe(cactuSoup);
-
         ShapelessRecipe cocoabeansSoup = new ShapelessRecipe(new ItemStack(Material.MUSHROOM_SOUP));
         cocoabeansSoup.addIngredient(Material.BOWL);
         cocoabeansSoup.addIngredient(Material.INK_SACK, 3);
