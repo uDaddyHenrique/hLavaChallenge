@@ -17,17 +17,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Lava extends JavaPlugin {
 
     private static Lava instance;
     public static SpawnManager spawn;
     public static ArenaManager arena;
-
     public Lava (){
         instance = this;
     }
