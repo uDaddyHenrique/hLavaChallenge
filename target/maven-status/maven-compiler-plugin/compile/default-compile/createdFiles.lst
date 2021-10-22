@@ -14,11 +14,13 @@ me\henrique\lava\Lava.class
 me\henrique\lava\manager\ArenaManager.class
 me\henrique\lava\listeners\PlayerDamageListener.class
 me\henrique\lava\utils\ItemBuilder.class
+me\henrique\lava\scheduler\SpawnScheduler.class
 me\henrique\lava\commands\SpawnCommand.class
 me\henrique\lava\listeners\ServerMenuInteractListener.class
 me\henrique\lava\listeners\PlayerDeathListener.class
 me\henrique\lava\model\RecraftRecipe.class
 me\henrique\lava\sign\SignBreakListener.class
 me\henrique\lava\listeners\BlockBreakListener.class
+me\henrique\lava\npcs\NPC.class
 me\henrique\lava\listeners\PlayerDropListener.class
 me\henrique\lava\sign\SignInteractListener.class

@@ -1,7 +1,10 @@
 package me.henrique.lava.commands;
 
 import me.henrique.lava.Lava;
+import me.henrique.lava.scheduler.SpawnScheduler;
 import me.henrique.lava.utils.ItemBuilder;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -27,11 +30,8 @@ public class SpawnCommand implements CommandExecutor {
                 }else cooldown.remove(p);
             cooldown.put(p, System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(5));
             if(args.length == 0){
-                p.teleport(Lava.spawn.getSpawn());
-                ItemStack warps = new ItemBuilder(Material.COMPASS).name("§aServidores").build();
-                p.getInventory().clear();
-                p.getInventory().setItem(4, warps);
-                p.sendMessage("§aVocê foi teletransportado ao spawn com sucesso.");
+                SpawnScheduler scheduler = new SpawnScheduler();
+                scheduler.startScheduler(p);
                 return true;
             }
         }
