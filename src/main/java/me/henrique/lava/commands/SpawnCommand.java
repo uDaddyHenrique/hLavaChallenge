@@ -9,11 +9,23 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
 public class SpawnCommand implements CommandExecutor {
+
+    private Map<Player, Long> cooldown = new HashMap<>();
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
         if(sender instanceof Player){
             Player p = (Player) sender;
+                if(cooldown.containsKey(p) && !(System.currentTimeMillis() >= cooldown.get(p))){
+                    p.sendMessage("§cAguarde " + convert(p) + "s para executar este comando novamente.");
+                    return false;
+                }else cooldown.remove(p);
+            cooldown.put(p, System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(5));
             if(args.length == 0){
                 p.teleport(Lava.spawn.getSpawn());
                 ItemStack warps = new ItemBuilder(Material.COMPASS).name("§aServidores").build();
@@ -24,5 +36,10 @@ public class SpawnCommand implements CommandExecutor {
             }
         }
         return false;
+    }
+
+    private Long convert(Player p){
+        long time = System.currentTimeMillis() - cooldown.get(p);
+        return 1 + TimeUnit.MILLISECONDS.toSeconds(time) * -1;
     }
 }
