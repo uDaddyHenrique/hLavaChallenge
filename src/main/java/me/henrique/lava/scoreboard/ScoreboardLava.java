@@ -12,10 +12,9 @@ public class ScoreboardLava {
         ScoreAPI score = new ScoreAPI(" §b§lLAVA CHALLENGE");
 
         score.addLine("", 12);
-        score.addLine("§aJogadores Online: §f" + Bukkit.getOnlinePlayers().size(), 11);
-        score.addLine("§6Coins: §f" + Lava.getPlayerManager().getAccount(p.getName()).getAmount(), 10);
-        score.addLine("", 9);
-        score.addLine("§7myserver.com.br", 8);
+        score.addLine("§fCoins: §6" + Lava.getPlayerManager().getAccount(p.getName()).getAmount(), 11);
+        score.addLine("", 10);
+        score.addLine("§eorg.spigotmc.com.br", 9);
 
         score.setScoreBoard(p);
     }
