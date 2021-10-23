@@ -32,6 +32,7 @@ public class SpawnCommand implements CommandExecutor {
             if(args.length == 0){
                 SpawnScheduler scheduler = new SpawnScheduler();
                 scheduler.startScheduler(p);
+                p.sendMessage("§aVocê será teletransportado ao spawn em 3s");
                 return true;
             }
         }

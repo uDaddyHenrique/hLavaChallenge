@@ -13,8 +13,9 @@ public class ScoreboardLava {
 
         score.addLine("", 12);
         score.addLine("§aJogadores Online: §f" + Bukkit.getOnlinePlayers().size(), 11);
-        score.addLine("", 10);
-        score.addLine("§7myserver.com.br", 9);
+        score.addLine("§6Coins: §f" + Lava.getPlayerManager().getAccount(p.getName()).getAmount(), 10);
+        score.addLine("", 9);
+        score.addLine("§7myserver.com.br", 8);
 
         score.setScoreBoard(p);
     }

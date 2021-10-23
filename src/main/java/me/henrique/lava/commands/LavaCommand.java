@@ -17,6 +17,7 @@ public class LavaCommand implements CommandExecutor {
     private SpawnManager spawn;
     private ArenaManager arena;
 
+
     public LavaCommand(){
         this.spawn = Lava.spawn;
         this.arena = Lava.arena;
