@@ -14,16 +14,14 @@ public class MySQL {
 
     private final String user;
     private final String password;
-    private final String host;
-    private final int port;
+    private final String connection;
     private final String database;
     private int query;
 
-    public MySQL(String user, String password, String host, int port, String database){
+    public MySQL(String connection, String user, String password, String database){
+        this.connection = connection;
         this.user = user;
         this.password = password;
-        this.host = host;
-        this.port = port;
         this.database = database;
         this.query = 0;
         loadDatabase();
