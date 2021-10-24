@@ -1,8 +1,8 @@
 MySQL:
  # Exemplo: connection: '177.33.22.1:3306'
- connection: 'address:port'
+ connection: 'localhost:3306'
  # Usuário utilizado para efetuar conexão com o banco de dados
- user: ''
+ user: 'root'
  # Senha utilizada para efetuar conexão com o banco de dados
  password: ''
  # Nome do banco de dados utilizado para salvar as informações
