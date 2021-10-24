@@ -81,12 +81,11 @@ public class Lava extends JavaPlugin {
         }
 
         YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
-            String host = config.getString("MySQL.host");
+            String connection = config.getString("MySQL.connection");
             String database = config.getString("MySQL.database");
             String user = config.getString("MySQL.user");
             String password = config.getString("MySQL.password");
-            Integer port = config.getInt("MySQL.port");
-            mySQL = new MySQL(user, password, host, port, database);
+            mySQL = new MySQL(connection, user, password, database);
         }
     public static Lava getInstance(){
         return instance;
