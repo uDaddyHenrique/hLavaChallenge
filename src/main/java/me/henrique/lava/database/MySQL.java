@@ -12,18 +12,16 @@ public class MySQL {
 
     private Connection connection;
 
+    private final String hostandport;
     private final String user;
     private final String password;
-    private final String host;
-    private final int port;
     private final String database;
     private int query;
 
-    public MySQL(String user, String password, String host, int port, String database){
+    public MySQL(String hostandport, String user, String password, String database){
+        this.hostandport = hostandport;
         this.user = user;
         this.password = password;
-        this.host = host;
-        this.port = port;
         this.database = database;
         this.query = 0;
         loadDatabase();
@@ -35,7 +33,7 @@ public class MySQL {
                     return;
 
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://" + this.host + ":" + this.port + "/" + this.database, this.user, this.password);
+            connection = DriverManager.getConnection("jdbc:mysql://" + this.hostandport + "/" + this.database, this.user, this.password);
             System.out.println("[MySQL] Conectado ao MySQL com sucesso.");
         }catch (ClassNotFoundException | SQLException e){
             query--;

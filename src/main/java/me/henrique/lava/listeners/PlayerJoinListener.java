@@ -18,7 +18,7 @@ public class PlayerJoinListener implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
         Lava.getPlayerManager().loadAccount(p.getName());
-        ScoreboardLava.updateScore(p);
+        ScoreboardLava.setScore(p);
         ItemStack warps = new ItemBuilder(Material.COMPASS).name("§aServidores").build();
         p.getInventory().clear();
         p.getInventory().setItem(4, warps);

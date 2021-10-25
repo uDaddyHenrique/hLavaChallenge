@@ -15,7 +15,7 @@ public class SpawnScheduler {
             ItemStack warps = new ItemBuilder(Material.COMPASS).name("§aServidores").build();
             p.getInventory().clear();
             p.getInventory().setItem(4, warps);
-            p.sendMessage("§aVocê foi teletransportado ao spawn com sucesso.");
+            p.sendMessage("§aTeleportado para o spawn com sucesso.");
         }, 20*3);
    }
 }

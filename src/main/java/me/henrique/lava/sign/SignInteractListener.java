@@ -4,7 +4,6 @@ import me.henrique.lava.Lava;
 import me.henrique.lava.player.ItemsWarpLava;
 import me.henrique.lava.player.PlayerObject;
 import me.henrique.lava.scoreboard.ScoreboardLava;
-import me.henrique.lava.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Sign;
@@ -51,9 +50,10 @@ public class SignInteractListener implements Listener {
                 p.teleport(Lava.arena.getArena());
                 PlayerObject object = Lava.getPlayerManager().getAccount(p.getName());
                 object.setAmount(object.getAmount() + 5);
+                ScoreboardLava.setScore(p);
                 p.getInventory().clear();
                 ItemsWarpLava.setItems(p);
-                p.sendMessage("§aVocê passou o lava challenge. §6+ 5 coins.");
+                p.sendMessage("§aVocê passou o lava challenge. §6+5 coins.");
             }
         }
     }

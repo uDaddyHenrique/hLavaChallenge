@@ -3,7 +3,8 @@
     <output-path>$USER_HOME$/Downloads</output-path>
     <root id="archive" name="hLavaChallenge.jar">
       <element id="module-output" name="hLavaChallenge" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/spigotmc/spigot/1.8.8-R0.1-SNAPSHOT/spigot-1.8.8-R0.1-SNAPSHOT.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/config.yml" />
     </root>
   </artifact>
 </component>

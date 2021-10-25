@@ -2,6 +2,7 @@ C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\player
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\listeners\BlockBreakListener.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\commands\SpawnCommand.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\listeners\CompassInteractListener.java
+C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\holograms\Hologram.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\listeners\PlayerDamageListener.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\listeners\PlayerDropListener.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\listeners\PlayerJoinListener.java
@@ -21,8 +22,8 @@ C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\player
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\utils\ScoreAPI.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\commands\LavaCommand.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\listeners\PlayerDamageByEntityListener.java
-C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\npcs\NPC.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\menus\ServersMenu.java
+C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\listeners\AsyncPlayerChatListener.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\database\MySQL.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\model\RecraftRecipe.java
 C:\Users\speed\IdeaProjects\hLavaChallenge\src\main\java\me\henrique\lava\player\ItemsWarpLava.java

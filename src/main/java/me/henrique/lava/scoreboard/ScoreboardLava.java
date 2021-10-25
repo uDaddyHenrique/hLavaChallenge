@@ -4,10 +4,11 @@ import me.henrique.lava.Lava;
 import me.henrique.lava.utils.ScoreAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitScheduler;
 
 public class ScoreboardLava {
 
-    public static void updateScore(Player p ){
+    public static void setScore(Player p ){
 
         ScoreAPI score = new ScoreAPI(" §b§lLAVA CHALLENGE");
 

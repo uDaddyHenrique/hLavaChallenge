@@ -2,15 +2,12 @@ package me.henrique.lava.commands;
 
 import me.henrique.lava.Lava;
 import me.henrique.lava.scheduler.SpawnScheduler;
-import me.henrique.lava.utils.ItemBuilder;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.TextComponent;
-import org.bukkit.Material;
+import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class SpawnCommand implements CommandExecutor {
 
     private Map<Player, Long> cooldown = new HashMap<>();
+    int tempo = 3;
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -32,7 +30,16 @@ public class SpawnCommand implements CommandExecutor {
             if(args.length == 0){
                 SpawnScheduler scheduler = new SpawnScheduler();
                 scheduler.startScheduler(p);
-                p.sendMessage("§aVocê será teletransportado ao spawn em 3s");
+                Bukkit.getScheduler().scheduleSyncRepeatingTask(Lava.getInstance(), new Runnable() {
+                    @Override
+                    public void run() {
+                        if(tempo > 0){
+                            p.sendTitle("§aTeleportando em...", "§7" + tempo + " §fsegundos.");
+                            p.playSound(p.getLocation(), Sound.CLICK, 1, 1);
+                            tempo--;
+                        }
+                    }
+                }, 0, 20);
                 return true;
             }
         }

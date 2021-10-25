@@ -8,13 +8,14 @@ import me.henrique.lava.manager.ArenaManager;
 import me.henrique.lava.manager.SpawnManager;
 import me.henrique.lava.model.RecraftRecipe;
 import me.henrique.lava.player.PlayerManager;
-import me.henrique.lava.scoreboard.ScoreboardLava;
 import me.henrique.lava.sign.SignBreakListener;
 import me.henrique.lava.sign.SignInteractListener;
 import me.henrique.lava.sign.SignPlaceListener;
 import me.henrique.lava.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -22,7 +23,9 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.lang.reflect.Field;
 import java.util.*;
+import java.util.logging.Level;
 
 public class Lava extends JavaPlugin {
 
@@ -69,6 +72,7 @@ public class Lava extends JavaPlugin {
         pm.registerEvents(new PlayerDropListener(), this);
         pm.registerEvents(new PlayerRespawnListener(), this);
         pm.registerEvents(new PlayerDamageByEntityListener(), this);
+        pm.registerEvents(new AsyncPlayerChatListener(), this);
         pm.registerEvents(new SignPlaceListener(), this);
         pm.registerEvents(new SignBreakListener(), this);
         pm.registerEvents(new SignInteractListener(), this);
@@ -81,12 +85,11 @@ public class Lava extends JavaPlugin {
         }
 
         YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
-            String host = config.getString("MySQL.host");
-            String database = config.getString("MySQL.database");
+            String connection = config.getString("MySQL.connection");
             String user = config.getString("MySQL.user");
             String password = config.getString("MySQL.password");
-            Integer port = config.getInt("MySQL.port");
-            mySQL = new MySQL(user, password, host, port, database);
+            String database = config.getString("MySQL.database");
+            mySQL = new MySQL(connection, user, password, database);
         }
     public static Lava getInstance(){
         return instance;
