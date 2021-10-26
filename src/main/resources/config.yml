@@ -1,6 +1,10 @@
 MySQL:
+
+  #Coloque aqui sua host e port para abrir conexão com MySQL Exemplo: 'localhost:3306'
+  connection: 'localhost:3306'
+  #Coloque aqui seu usuário da sua MySQL para abrir conexão com MySQL Exemplo: 'root'
   user: 'root'
+  #Coloque aqui a senha da sua MySQL para abrir conexão com MySQL Exemplo: 'mypassword'
   password: ''
-  host: 'localhost'
-  port: 3306
+  #Coloque aqui o nome do seu banco de dados da sua MySQL para abrir conexão com MySQL Exemplo: 'MCServer'
   database: 'MCServer'
