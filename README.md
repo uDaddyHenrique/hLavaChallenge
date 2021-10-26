@@ -1,5 +1,5 @@
 # hLavaChallenge
-Um simples plugin de lava challenge feito em bukkit.
+Um simples plugin de lava challenge feito em java utilizando a api bukkit.
 
 # Funções
 Um plugin para que quem chegar ao final passa o lava challenge.
